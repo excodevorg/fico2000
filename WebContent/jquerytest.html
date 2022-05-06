@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#test").click(function(){
+                $("#hello").hide('slide',{direction:'down'}, 'slow');
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <artice>
+        <div id="hello">
+            hello
+        </div>
+        <p><span id="test">Test</span></p>
+    </artice>
+</body>
+</html>

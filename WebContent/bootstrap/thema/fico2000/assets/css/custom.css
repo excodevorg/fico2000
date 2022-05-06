@@ -1,0 +1,74 @@
+/* Add here all your css styles (customizations) */
+
+p,span,h1,h2,h3,h4,h5{font-family: AritaSB;}
+b{font-family: AritaB;}
+
+.wrapper .header .nav{font-family: AritaSB;}
+
+.container .service{text-align: center;}
+.container .service h4{font-family: AritaSB;}
+
+/*비밀번호찾기*/
+.findingPassword{position:absolute;right:0;margin:-20px 20px 10px;text-decoration:underline;}
+.fpBox{padding: 10px 0;background-color:azure;}
+
+.mintBox{background-color:#78d3db;padding: 0 5px;display: inline-block;color:#fff;}
+.mint{color:#71ccd4;}
+
+a.mintBox:hover{color:#fff;text-decoration:none;}
+
+.PEFTable{width:100%;border:0;border-spacing:0;padding:0;margin:0 auto;border:1px solid #eaeaea;text-align: center;}
+.PEFTable thead{background-color:azure;font-weight: bold;}
+.PEFTable thead tr{height:30px;}
+.PEFTable tr{height: 21px;}
+.PEFTable tr td{border:1px solid #eaeaea;}
+.PEFTable tbody tr td:first-child{color:#27d7e7;}
+.PEFTable .important{background:#27d7e7;color:#fff;font-weight: bold;}
+
+.headline-center-v2.v_ceo p{padding:0};
+.v_ceo2{padding-left:0 !important;padding-right:0 !important;background: red}
+    
+/* CEO그래프 */
+#ceoGraph{top:144px;margin-bottom:100px;}
+
+@media (max-width: 768px) {
+  #ceoGraph{top:0;margin-bottom:0;}
+}
+
+/* Admin_state_tags */
+.memberStateTag {
+    box-shadow: none;
+    border-radius: 0;
+    
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;    
+
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+.memberStateTag.active{
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.memberStateTag.notactive{
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+#AdminLNB .activate a {cursor:default;}

@@ -1,0 +1,27 @@
+
+.grid450	 {
+  width: 100%;	
+  height: 450px;
+}	
+
+.gridFrame {
+	padding-left:25px;
+	padding-right:25px;
+}
+
+.cell_center {		
+	text-align:center;
+}
+
+.cell_right {
+	text-align:right;
+}
+
+.cell_left {
+	text-align:left;
+}
+
+#gridTest .ui-grid-header-cell {
+	text-align:center;
+}
+

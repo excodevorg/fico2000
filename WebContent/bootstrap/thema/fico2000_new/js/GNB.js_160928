@@ -1,0 +1,110 @@
+var GNB = function( mmenu, smenu, tmenu ) {
+    
+    $.getJSON( "js/menus.json", readData);
+    
+    function readData( data ) 
+    {
+        gnbDataLoaded( data, mmenu, smenu, tmenu );
+    }
+};
+function gnbDataLoaded( data, activeMmenu, activeSmenu, activeTmenu ) {
+    
+    var utilMenus = "";
+    var topMenus = "";
+    var cnt = 0;
+    var utilCnt = 0;
+    
+    var iconClass = ["demo-psi-home", "demo-psi-pen-5", "demo-psi-bar-chart", "demo-psi-receipt-4", "demo-psi-happy"];
+    
+    $.each( data, function( key, val ) {
+        
+        if(key == "Home")
+        {            
+            $(".navbar-brand").attr("href", val);
+        }
+        
+        if(key == "util") 
+        {            
+            utilMenus += '<ul class="nav navbar-top-links pull-right">';
+            for(var key in val) {
+                utilMenus += '<li><a href="' + val[key] + '" >' + key + '</a></li>';
+            }
+            utilMenus += '</ul>';
+            
+            $("#ficoTopNav").append( utilMenus );
+             
+            /*
+            <ul class="nav navbar-top-links pull-right">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">관리자</a></li>                        
+                <li>
+                    <a href="#" class="aside-toggle navbar-aside-icon">
+                        <i class="pci-ver-dots"></i>
+                    </a>
+                </li>
+            </ul>
+            */
+        }
+        
+        if(key == "GNB")
+        {            
+            topMenus += '<ul id="mainnav-menu" class="list-group">';
+            
+            for(var key in val) {
+                
+                if( typeof val[key] != "object" ) {
+                    //topMenus += '<li class="depth1">' + key + " " + val[key];  
+                    //topMenus += '<li class="depth2"><a href="' + val[key] + '">' + key + '</a></li>';
+                    
+                    topMenus += '<li class="depth1"><a href="#"><i class='+ iconClass[cnt] +'></i><span class="menu-title"><strong>' + key + '</strong></span><i class="arrow"></i></a>';
+                    
+                } else {
+                    topMenus += '<li class="depth1"><a href="#"><i class='+ iconClass[cnt] +'></i><span class="menu-title"><strong>' + key + '</strong></span><i class="arrow"></i></a>'
+                    
+                    var val2 = val[key];
+                    topMenus += '<ul>';
+                    for(var key in val2) {
+                        if( typeof val2[key] != "object" ) {                
+                            topMenus += '<li class="depth2"><a href="' + val2[key] + '">' + key + '</a>';
+                        } else {
+                            topMenus += '<li class="depth2"><a href="fas_index.html" onclick="gotoPage(' +key+ ')">' + key + '<i class="arrow"></i></a>';
+                            
+                            var val3 = val2[key];
+                            topMenus += '<ul class="collapse">';
+                            for(var key in val3) {
+                                topMenus += '<li class="depth3"><a href="' + val3[key] + '">' + key + '</a></li>';
+                            }
+                            topMenus += '</ul>';
+                        }
+                    }
+                    topMenus += '</li></ul>';
+                }
+                
+                cnt++;
+                
+            }
+            topMenus += '</ul>';
+        }
+    });
+    
+    $("#ficonavi").append( topMenus );
+
+    
+    //activate GNB with active_page_num
+    if(activeMmenu >= 0) {
+        $("#ficonavi .depth1").eq(activeMmenu).addClass("active-sub");
+        $("#ficonavi .depth1").eq(activeMmenu).addClass("active");
+    }
+    
+    if(activeSmenu >= 0) {
+        $("#ficonavi .depth1").eq(activeMmenu).find(".depth2").eq(activeSmenu).addClass("active-link");
+    }
+    
+    if(this.activeTmenu >= 0) {
+        $("#ficonavi .depth1").eq(activeMmenu).find(".depth2").eq(activeSmenu).find(".depth3").eq(activeTmenu).addClass("active-link");
+    }   
+    
+    
+    $(document).trigger('nifty.ready');
+}

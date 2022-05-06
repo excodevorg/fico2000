@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@font-face{
+    font-family:AritaT;
+    src:url('../fonts/arita-Thin.eot');
+    src:url('../fonts/arita-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arita-Thin.woff') format('woff'),
+        url('../fonts/arita-Thin.ttf') format('truetype'),
+        url('../fonts/arita-Thin.svg#PreloSlabMedium') format('svg');
+    font-weight:normal;font-style:normal
+}
+@font-face{
+    font-family:AritaL;
+    src:url('../fonts/arita-Light.eot');
+    src:url('../fonts/arita-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arita-Light.woff') format('woff'),
+        url('../fonts/arita-Light.ttf') format('truetype'),
+        url('../fonts/arita-Light.svg#PreloSlabMedium') format('svg');
+    font-weight:normal;font-style:normal
+}
+@font-face{
+    font-family:Arita;
+    src:url('../fonts/arita-Medium.eot');
+    src:url('../fonts/arita-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arita-Medium.woff') format('woff'),
+        url('../fonts/arita-Medium.ttf') format('truetype'),
+        url('../fonts/arita-Medium.svg#PreloSlabMedium') format('svg');
+    font-weight:normal;font-style:normal
+}
+@font-face{
+    font-family:AritaSB;
+    src:url('../fonts/arita-SemiBold.eot');
+    src:url('../fonts/arita-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arita-SemiBold.woff') format('woff'),
+        url('../fonts/arita-SemiBold.ttf') format('truetype'),
+        url('../fonts/arita-SemiBold.svg#PreloSlabMedium') format('svg');
+    font-weight:normal;font-style:normal
+}

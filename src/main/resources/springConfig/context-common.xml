@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+     	http://www.springframework.org/schema/aop
+  		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	<context:component-scan base-package="com.fas">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+	
+	<bean id="httpServletResponse" class="com.fas.web.cmmn.filter.SessionRequiring$HttpServletResponseFactoryBean" scope="request">
+	<aop:scoped-proxy/>
+	</bean>	
+	<bean id="responseInScopeFilter" class="com.fas.web.cmmn.filter.SessionRequiring$ResponseInScopeFilter"/>
+
+	<bean id="HttpUtil" class="com.fas.web.cmmn.util.HttpUtil"></bean>
+	
+	<bean id="SpringApplicationContext" class="com.fas.web.cmmn.util.SpringApplicationContext"></bean>
+	
+	<bean id="PropertyUtils" class="com.fas.web.cmmn.util.PropertyUtils"></bean>	
+	
+	<bean id="leaveaTrace" class="com.fas.web.cmmn.trace.LeaveaTrace">
+		<property name="traceHandlerServices">
+			<list>
+				<ref bean="traceHandlerService" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="traceHandlerService" class="com.fas.web.cmmn.trace.manager.DefaultTraceHandleManager">
+		<property name="reqExpMatcher">
+			<ref bean="antPathMater" />
+		</property>
+		<property name="patterns">
+			<list>
+				<value>*</value>
+			</list>
+		</property>
+		<property name="handlers">
+			<list>
+				<ref bean="defaultTraceHandler" />
+			</list>
+		</property>
+	</bean>
+<!-- 	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host"><value>smtp.gmail.com</value></property>
+        <property name="port"><value>587</value></property>
+        <property name="protocol"><value>smtp</value></property>
+        <property name="username"><value>fico2000webadm@gmail.com</value></property>
+        <property name="password"><value>rytnsla2000</value></property>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.quitwait">false</prop>
+                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                <prop key="mail.smtp.socketFactory.fallback">false</prop>
+                <prop key="mail.debug">true</prop>
+            </props>
+        </property>
+    </bean>
+    
+     -->
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="username" value="fico2000webadm@gmail.com" />
+        <property name="password" value="rytnsla2000" />
+       
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.auth">true</prop>
+               
+               
+            </props>
+        </property>
+	</bean>
+
+	<bean id="antPathMater" class="org.springframework.util.AntPathMatcher" />
+	<bean id="defaultTraceHandler" class="com.fas.web.cmmn.trace.handler.DefaultTraceHandler" />
+	
+	<bean id="FasStaticMenuList" class="com.fas.cmmn.util.FasStaticMenuList" />
+    
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    	<property name="basename">
+    		<value>classpath:messages/message-common</value>
+    	</property> 
+    	<property name="defaultEncoding" value="UTF-8"/>
+   		<property name="cacheSeconds" value="180"/>
+    </bean>
+    
+    <bean id="fileUploadUtil" class="com.fas.cmmn.util.FileUploadUtil"></bean>
+    
+   <!--
+    <bean id="comConst" class="com.fas.web.cmmn.util.ComConst">
+    	<property name="fileUploadPath" value="/sw/fileUpload/"/>
+    	<property name="imgFileUploadPath" value="C:\\work\\aws\\workspace_root\\fico2000\\WebContent\\bootstrap\\thema\\fico2000\\img\\profile-photos\\"/>
+    	<property name="hostUrl" value="http://localhost:8080"/>
+    	<property name="imgUploadUrl" value="/bootstrap/thema/fico2000/img/profile-photos/"/>
+    	<property name="excelUploadPath" value="/sw/fileUpload/"/>
+    </bean> 
+    -->
+ 
+
+     <bean id="comConst" class="com.fas.web.cmmn.util.ComConst">
+    	<property name="fileUploadPath" value="/sw/fileUpload/"/>
+    	<property name="imgFileUploadPath" value="/sw/tomcat7/webapps/fas/bootstrap/thema/fico2000/img/profile-photos/"/>
+    	<property name="hostUrl" value="${FAS.host}"/>
+    	<property name="imgUploadUrl" value="/bootstrap/thema/fico2000/img/profile-photos/"/>
+    	<property name="excelUploadPath" value="/sw/fileUpload/"/>
+    	<property name="toEmails" value="jepul@ibksystem.co.kr, lsm@ibksystem.co.kr"/>
+    </bean>
+    
+    
+    <bean id="BOKOpenAPI" class="com.fas.model.com.api.impl.BOKOpenAPI">
+    	<property name="authCd" value="HVB8MBGPNPJVP0B0T8G3"/>
+    	<property name="type" value="xml"/>
+    	<property name="startNum" value="1"/>
+    	<property name="endNum" value="100"/>
+    	<property name="homeUrl" value="http://ecos.bok.or.kr/api"/>
+    </bean>
+
+        
+</beans>   

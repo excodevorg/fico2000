@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+     	http://www.springframework.org/schema/aop
+  		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+  		
+  	 <!-- 로컬호스 -->
+		<!--  google console fico2000webadm@gmail.com -->
+		 <bean id="googleConnectionFactory" class="org.springframework.social.google.connect.GoogleConnectionFactory">
+			<constructor-arg value="216162001406-vhk38ektq51veq7umcehm85633rqub4k.apps.googleusercontent.com" />
+			<constructor-arg value="1kk5Ic6OChaiktjzbCv6Qvst" />
+		</bean>
+  
+		<bean id="googleOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
+			<property name="scope" value="https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read"/>
+			<property name="redirectUri" value="${FAS.host}/google/OAuth2callback.do"/>
+		</bean>
+
+		 <bean id="facebookConnectionFactory" class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+			<constructor-arg value="361614317643150" />
+			<constructor-arg value="a3ae2e4cbeca26d3d4d8cea2ba318b3e" />
+		</bean>
+		
+		<!-- facebook console jepul@ibksystem.co.kr -->
+		<bean id="facebookOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
+			<property name="scope" value="email"/>
+			<property name="redirectUri" value="${FAS.host}/facebook/OAuth2callback.do"/>
+		</bean>
+		
+		<!--  https://developers.kakao.com -->
+		 <bean id="kakaoConnectionFactory" class="org.springframework.social.kakao.connect.KakaoConnectionFactory">
+			<constructor-arg value="dabbc44ce0f7dd2e406c6d4926ad0863" />
+		</bean>
+		
+		<bean id="kakaoOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
+			<property name="redirectUri" value="${FAS.host}/kakao/OAuth2callback.do"/>
+		</bean>
+
+ 		
+		 <!-- twitter test -->
+		<!-- https://apps.twitter.com/    console login id fico2000webadm@gmail.com -->
+		 <bean id="twitterConnectionFactory" class="org.springframework.social.twitter.connect.TwitterConnectionFactory">
+			<constructor-arg value="Gy7CBKaAc9SwbOvOZkTHwT1Kt" />
+			<constructor-arg value="QZu8ihpwg0dlKg5uIZLSoCHd1rH9GLSTmFhJtAtlP8Rd1yIIs6" />
+		</bean>
+		<!-- twitter real -->
+		<!-- https://apps.twitter.com/    console login id fico2000webadm@gmail.com -->
+		<!-- 
+		 <bean id="twitterConnectionFactory" class="org.springframework.social.twitter.connect.TwitterConnectionFactory">
+			<constructor-arg value="f2uF7MsuyTGRW9Usz98dTWpWd" />
+			<constructor-arg value="SBojtaBnsJVug27ibKiinJw3wEK4vClPnJ442JPRlrzXiMTX8r" />
+		</bean>
+ 		-->
+		<!-- google : fico2000webadm@gmail.com rytnsla2000 console.developers.google.com -->
+		<!--  facebook : jepul@ibksystem.co.kr ojh6387900 developers.facebook.com-->
+		<!--  twitter : fico2000webadm@gmail.com rytnsla2000 https://apps.twitter.com/-->
+		<!--  kakotoalk : fico2000webadm@gmail.com rytnsla2000 https://developers.kakao.com/-->
+		
+
+</beans>   

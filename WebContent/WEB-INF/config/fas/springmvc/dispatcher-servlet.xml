@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xsi:schemaLocation="
+        		http://www.springframework.org/schema/mvc
+                http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+                http://www.springframework.org/schema/beans 
+        		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                http://www.springframework.org/schema/context 
+                http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:component-scan base-package="com.fas">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+    </context:component-scan>
+    
+    <mvc:annotation-driven>
+    	<mvc:message-converters>
+    		<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+    			<property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+    		</bean>
+    	</mvc:message-converters>
+    </mvc:annotation-driven>
+    
+    <mvc:interceptors>
+    	<mvc:interceptor>
+    		<mvc:mapping path="/adm/*"/>
+    		<mvc:mapping path="/fin/*"/>
+    		<mvc:mapping path="/edu/*"/>
+    		<mvc:mapping path="/com/*"/>
+    		<bean class="com.fas.cmmn.interceptor.SessionCheckInterceptor"/>
+    	</mvc:interceptor>
+    </mvc:interceptors>
+    
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="webBindingInitializer">
+            <bean class="com.fas.web.cmmn.util.FasWebBindingInitializer"/>
+        </property>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+<!--    
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+    	<property name="order" value="1" />
+    	<property name="cache" value="true" />
+    	<property name="suffix" value=".ftl" />
+    	<property name="contentType" value="text/html; charset=EUC-KR" />
+    	<property name="exposeSpringMacroHelpers" value="true" />
+    </bean>
+-->    
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="defaultErrorView" value="cmmn/pefError"/>
+        <property name="exceptionMappings">
+            <props>
+                <prop key="org.springframework.dao.DataAccessException">cmmn/dataAccessFailure</prop>
+                <prop key="org.springframework.transaction.TransactionException">cmmn/transactionFailure</prop>
+                <prop key="com.fas.web.cmmn.exception.BizException">cmmn/BizException</prop>
+                <prop key="org.springframework.security.AccessDeniedException">cmmn/accessDenied</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver" p:order="3" 
+	    p:viewClass="org.springframework.web.servlet.view.JstlView" 
+	    p:prefix="/WEB-INF/jsp_new/" p:suffix=".jsp"/>
+	    
+<!-- 	    
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLˇoaderPath" value="/WEB-INF/freemarker" />
+		<property name="defaultEncoding" value="EUC-KR" />
+	</bean>
+ -->
+ 
+ 	<bean id="downloadView" class="com.fas.web.cmmn.util.DownloadView"/>
+ 
+ 	<bean id="downloadViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order">
+			<value>0</value>
+		</property>
+	</bean>
+ 
+ 
+ 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+ 		<!-- setting maximum upload size -->
+		<property name="maxUploadSize" value="51200000" />
+ 	</bean>
+ 	
+    <!-- For Pagination Tag -->
+    <bean id="imageRenderer" class="com.fas.cmmn.paging.ImgPaginationRenderer"/>
+
+<!-- 
+    <bean id="paginationManager" class="com.fas.cmmn.paging.DefaultPaginationManager">
+        <property name="rendererType">
+            <map>
+                <entry key="image" value-ref="imageRenderer"/> 
+            </map>
+        </property>
+    </bean> -->
+	<!-- /For Pagination Tag -->
+	
+</beans>

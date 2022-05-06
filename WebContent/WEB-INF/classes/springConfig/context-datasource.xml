@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/jdbc  http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd">
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${FAS.jdbc.driverName}"></property>
+		<property name="url" value="${FAS.jdbc.url}"></property>
+		<property name="username" value="${FAS.jdbc.user}"></property>
+		<property name="password" value="${FAS.jdbc.password}"></property>
+		<property name="initialSize" value="25"></property>		
+		<property name="maxActive" value="25"></property>
+		<property name="maxIdle" value="20"></property>		
+		<property name="poolPreparedStatements" value="true"></property>
+		<property name="maxWait" value="30000"/>
+    	<property name="validationQuery" value="SELECT 1 FROM DUAL"/>
+   		<property name="testOnBorrow" value="true"/>
+    	<property name="testOnReturn" value="false"/>
+    	<property name="testWhileIdle" value="true"/>
+    	<property name="timeBetweenEvictionRunsMillis" value="60000"/>
+    </bean>
+
+    <!-- Classpath Resource에서 property값 불러오기 기능 -->
+    <bean id="fillInProperties" class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+    	<constructor-arg ref="TextEncryptorUtil"/>
+        <property name="location">
+            <value>classpath:fas_db.properties</value>
+        </property>
+    </bean>
+    
+	<!-- 각종 접속 정보의 계정 및 패스워드 복호화 기능 -->
+	<bean id="TextEncryptorUtil" class="com.fas.web.cmmn.util.TextEncryptorUtil">
+        <property name="key">
+            <value>fas</value>
+        </property>
+    </bean>	
+        
+</beans>        
