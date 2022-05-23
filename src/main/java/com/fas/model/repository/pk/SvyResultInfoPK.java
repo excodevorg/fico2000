@@ -18,7 +18,7 @@ public class SvyResultInfoPK implements Serializable {
 	private String svyId;
 	
 	@Column(name="seq")
-	private long seq;
+	private int seq;
 	
 	@Column(name="kolbCd")
 	private String kolbCd;
@@ -45,11 +45,11 @@ public class SvyResultInfoPK implements Serializable {
 		this.svyId = svyId;
 	}
 
-	public long getSeq() {
+	public int getSeq() {
 		return seq;
 	}
 
-	public void setSeq(long seq) {
+	public void setSeq(int seq) {
 		this.seq = seq;
 	}
 
