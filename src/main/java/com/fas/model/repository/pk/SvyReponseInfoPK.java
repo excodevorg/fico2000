@@ -20,7 +20,7 @@ public class SvyReponseInfoPK implements Serializable {
 	
 	@Column(name="svyItmId")
 	private String svyItmId;
-	
+	 
 	@Column(name="svyItmDtId")
 	private String svyItmDtId;
 	
