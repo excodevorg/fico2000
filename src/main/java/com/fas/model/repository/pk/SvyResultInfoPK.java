@@ -18,7 +18,7 @@ public class SvyResultInfoPK implements Serializable {
 	private String svyId;
 	
 	@Column(name="seq")
-	private int seq;
+	private int seq; 
 	
 	@Column(name="kolbCd")
 	private String kolbCd;
