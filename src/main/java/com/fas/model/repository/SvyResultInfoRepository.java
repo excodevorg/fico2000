@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.fas.model.svy.domain.SvyResultInfoDomain;
 
-public interface SvyResultInfoRepository  extends JpaRepository<SvyResultInfoDomain, String>{
+public interface SvyResultInfoRepository  extends JpaRepository<SvyResultInfoDomain, String> {
 
 	@Query("select u from SvyResultInfoDomain u where u.userId = ?1 and u.svyId = ?2 order by u.seq desc")
 	public List<SvyResultInfoDomain> findByUserIdAndSvyIdOrderBySeqDesc(String userId, String svyId);
