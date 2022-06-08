@@ -30,11 +30,13 @@ public class SvyReponseInfoDao {
     }
     
     public List<SvyReponseInfoDomain> selectSvyResponseDetailList(SvyReponseInfoDomain domain) throws Exception {
-    	return svyResponseInfoRepository.findBySvyRepUnqNoAndUserIdOrderBySvyItmIdDesc(domain.getSvyRepUnqNo(), domain.getUserId());
+    	//return svyResponseInfoRepository.findBySvyRepUnqNoAndUserIdOrderBySvyItmIdDesc(domain.getSvyRepUnqNo(), domain.getUserId());
+    	return null;
     }
     
     public List<SvyReponseInfoDomain> selectSvyResponseList(SvyReponseInfoDomain domain) throws Exception {
-    	return svyResponseInfoRepository.findByUserIdAndSvyIdOrderBySvyRepUnqNoDesc(domain.getUserId(), domain.getSvyId());
+    	//return svyResponseInfoRepository.findByUserIdAndSvyIdOrderBySvyRepUnqNoDesc(domain.getUserId(), domain.getSvyId());
+    	return null;
     }
     
     

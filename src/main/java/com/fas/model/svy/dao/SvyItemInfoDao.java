@@ -30,7 +30,8 @@ public class SvyItemInfoDao {
     }
     
     public List<SvyItemInfoDomain> selectSvyItemList(SvyItemInfoDomain domain) throws Exception {
-    	return svyItemInfoRepository.findBySvyIdOrderByOrdAsc(domain.getSvyId());
+    	//return svyItemInfoRepository.findBySvyIdOrderByOrdAsc(domain.getSvyId());
+    	return null;
     }
 	
 }

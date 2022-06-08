@@ -28,7 +28,8 @@ public class SvyBaseInfoDao {
     }
     
     public SvyBaseInfoDomain selectSvyBaseInfo(SvyBaseInfoDomain domain)  throws Exception {
-    	return svyBaseInfoRepository.findBySvyId(domain.getSvyId());
+    	//return svyBaseInfoRepository.findBySvyId(domain.getSvyId());
+    	return null;
     }
 
 }
