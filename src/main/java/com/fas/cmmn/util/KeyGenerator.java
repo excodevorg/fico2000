@@ -118,6 +118,8 @@ public final class KeyGenerator {
     }
 
     public static void main(String[] args) throws Exception {
-    	System.out.println(KeyGenerator.sha256("lsm@ibksystem.co.kr"));
+    	//System.out.println(KeyGenerator.sha256("lsm@ibksystem.co.kr"));
+    	
+    	System.out.println(KeyGenerator.getKeyByDateFormat());
     }
 }

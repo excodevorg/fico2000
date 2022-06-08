@@ -124,8 +124,8 @@
     
     
     <bean id="BOKOpenAPI" class="com.fas.model.com.api.impl.BOKOpenAPI">
-    	<property name="authCd" value="HVB8MBGPNPJVP0B0T8G3"/>
-    	<property name="type" value="xml"/>
+    	<property name="authCd" value="XF5U7VP7KYY82LS7D2JD"/>
+    	<property name="type" value="xml"/> 
     	<property name="startNum" value="1"/>
     	<property name="endNum" value="100"/>
     	<property name="homeUrl" value="http://ecos.bok.or.kr/api"/>
