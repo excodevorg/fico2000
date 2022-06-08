@@ -35,8 +35,7 @@ public class SvyReponseInfoDao {
     }
     
     public List<SvyReponseInfoDomain> selectSvyResponseList(SvyReponseInfoDomain domain) throws Exception {
-    	//return svyResponseInfoRepository.findByUserIdAndSvyIdOrderBySvyRepUnqNoDesc(domain.getUserId(), domain.getSvyId());
-    	return null;
+    	return svyResponseInfoRepository.findByUserIdAndSvyIdOrderBySvyRepUnqNoDesc(domain.getUserId(), domain.getSvyId());
     }
     
     
