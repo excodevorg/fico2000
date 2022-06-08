@@ -16,6 +16,7 @@
 				<value>com.fas.model.com.domain</value>
 				<value>com.fas.model.fin.domain</value>
 				<value>com.fas.model.edu.domain</value>
+				<value>com.fas.model.svy.domain</value>
 			</list>
 		</property>
 		<!-- 구현체별 자체 기능을 표준화 -->
