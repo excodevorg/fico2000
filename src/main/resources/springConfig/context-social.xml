@@ -10,12 +10,13 @@
   		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
   		
   	 <!-- 로컬호스 -->
+  	    <!-- gmail fico2000webadm@gmail.com / rytnsla@2000  // URL https://console.cloud.google.com/ -->
 		<!--  google console fico2000webadm@gmail.com -->
 		 <bean id="googleConnectionFactory" class="org.springframework.social.google.connect.GoogleConnectionFactory">
 			<constructor-arg value="216162001406-vhk38ektq51veq7umcehm85633rqub4k.apps.googleusercontent.com" />
 			<constructor-arg value="1kk5Ic6OChaiktjzbCv6Qvst" />
 		</bean>
-  
+		
 		<bean id="googleOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
 			<property name="scope" value="https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read"/>
 			<property name="redirectUri" value="${FAS.host}/google/OAuth2callback.do"/>
