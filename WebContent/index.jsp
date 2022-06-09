@@ -36,11 +36,11 @@ activeSuccess = (String) request.getAttribute("activeSuccess");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fico2000 - 기업분석 및 비즈니스의 모든 것 </title>
+<title>Fico2000 - 기업분석 및 비즈니스의 모든 것 (TEST)</title>
 
 <meta property="og:title" content="Fico2000"/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="http://www.fico2000.com/"/>
+<meta property="og:url" content="http://test.fico2000.com/"/>
 <meta property="og:description" content="기업분석 및 비즈니스의 모든 것"/>
 <meta property="og:image" content="http://test.fico2000.com/bootstrap/thema/fico2000_new/assets/img/renewal2019/fico2000_ogtag_center.jpg"/>
 <meta property="og:image:width" content="800" />
