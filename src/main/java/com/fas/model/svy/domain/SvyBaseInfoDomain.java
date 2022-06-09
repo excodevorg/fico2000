@@ -25,6 +25,9 @@ public class SvyBaseInfoDomain {
 	
 	@Column(name="itmCnt")
 	private BigDecimal itmCnt;
+	
+	@Column(name="useYn")
+	private String useYn;
 
 	@Column(name="frrgts", columnDefinition="DATETIME")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -62,6 +65,14 @@ public class SvyBaseInfoDomain {
 
 	public void setItmCnt(BigDecimal itmCnt) {
 		this.itmCnt = itmCnt;
+	}
+	
+	public String getUseYn() {
+		return useYn;
+	}
+
+	public void setUseYn(String useYn) {
+		this.useYn = useYn;
 	}
 
 	public Date getFrrgTs() {
