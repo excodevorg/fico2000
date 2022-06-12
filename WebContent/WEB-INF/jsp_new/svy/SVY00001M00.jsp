@@ -221,6 +221,16 @@
 
              <!--RENEWAL2019 CSS [ REQUIRED ] -->
     <link href="/bootstrap/thema/fico2000_new/assets/css/renewal2019_1.css" rel="stylesheet">
+     <script type="text/javascript">   
+    
+    function successCallback(data) {
+            console.log(data);
+    	}
+    	
+    function errorCallBack(e) {
+            console.log(e);
+    	}
+    </script>
     
 </head>
 
