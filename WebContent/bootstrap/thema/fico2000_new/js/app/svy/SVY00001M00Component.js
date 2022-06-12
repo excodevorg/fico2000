@@ -11,13 +11,19 @@ SVY00001M00Component.prototype.ngOnInit = function () {
     var res = svyService.svyItemList("20220529211621008000",SVY00001M00.callback);
     
     
-    console.log(res);
+
 	
 };
 
 
 SVY00001M00Component.prototype.callback = function(data) {
-
+    console.log('callback' , data);
+    
+    if (data != null) {
+		var res = JSON.parse(data);
+		
+		console.log('res >> ' , res);
+	}
 }
 
 
