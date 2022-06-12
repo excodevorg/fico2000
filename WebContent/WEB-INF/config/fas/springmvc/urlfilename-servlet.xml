@@ -7,6 +7,7 @@
 		<property name="mappings">
 			<props>
                 <prop key="/test/test.do">urlFilenameViewController</prop>
+                <prop key="/svy/SVY00001M00.do">urlFilenameViewController</prop>
                 <prop key="/exception/sessionCheckException.do">urlFilenameViewController</prop>
 			</props>
 		</property>
