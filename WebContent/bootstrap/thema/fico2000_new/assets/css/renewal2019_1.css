@@ -1306,6 +1306,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* main ---- */
 /* main */
 .mainBannerImg {width:100%; }
+
 .mainBannerTxt {position:absolute; top:10%; right:10%; width:100%; max-width: 430px;}
 
 .main-engine-banner {  position: absolute;  top:10%;  left:5%;  }
