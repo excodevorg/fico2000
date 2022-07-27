@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.47d2c37d.css",
+    "main.js": "./static/js/main.e2440cd0.js",
+    "static/media/009.png": "./static/media/009.e27355093585ba1945f7.png",
+    "static/media/006.png": "./static/media/006.b5a8ab9a7543f51e92c5.png",
+    "static/media/type3.png": "./static/media/type3.55700595a1f550d8d628.png",
+    "static/media/type1.png": "./static/media/type1.108c967cd90dac041a30.png",
+    "static/media/type4.png": "./static/media/type4.069f12d09dbb1dfd72d9.png",
+    "static/media/type2.png": "./static/media/type2.900369fc8a733697d9e4.png",
+    "static/media/type1-text.png": "./static/media/type1-text.adc0d38c97af17a60874.png",
+    "static/media/kakaotalk.png": "./static/media/kakaotalk.128af68784a7cafd1da8.png",
+    "static/media/type4-text.png": "./static/media/type4-text.68532817212113865d13.png",
+    "static/media/qna.png": "./static/media/qna.0fdec41c993d819e8054.png",
+    "static/media/type2-text.png": "./static/media/type2-text.34e76c7d0ef76cb09754.png",
+    "static/media/type3-text.png": "./static/media/type3-text.ddf75b5ae7925b6263cb.png",
+    "index.html": "./index.html",
+    "main.47d2c37d.css.map": "./static/css/main.47d2c37d.css.map",
+    "main.e2440cd0.js.map": "./static/js/main.e2440cd0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47d2c37d.css",
+    "static/js/main.e2440cd0.js"
+  ]
+}
