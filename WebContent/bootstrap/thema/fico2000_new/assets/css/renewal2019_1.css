@@ -1310,6 +1310,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .main-engine-banner {  position: absolute;  top:10%;  left:5%;  }
 
+.main-engine-banner2 {
+    position: absolute;
+    top: 10%;
+    left: 32%;
+}
+
+
 
 .page-header {font-weight:bold;padding:0 !important; padding-bottom:0 !important;}
 
