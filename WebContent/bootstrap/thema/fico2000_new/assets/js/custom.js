@@ -299,6 +299,7 @@ function toMove(menuId, obj) {
     if (subMenuId.indexOf("JOIN") > -1) path = 'join';
     if (subMenuId.indexOf("KOLB") > -1) path = 'kolb';
 
+    console.log('toMove >>>> ', menuId, obj)
     console.log('obj >>>> ' , obj);
 
     $("#ficoContent").load("/"+path+"/pageMove.do?menuCode="+menuId+"&params="+obj, function() {
