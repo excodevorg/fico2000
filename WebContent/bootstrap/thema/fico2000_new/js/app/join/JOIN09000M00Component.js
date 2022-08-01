@@ -1,6 +1,6 @@
 "use strict"
 
-var JOIN09000M00 = new JOIN09000M00Component();
+var JOIN09000M00_KOLB = new JOIN09000M00_KOLBComponent();
 var duplicateShield = false // 중복방지 
 
 function numberWithCommas(x) {
@@ -17,11 +17,11 @@ function dateTimeFormat(data) {
 	            data.substring(8,10)+":"+data.substring(10,12)+":"+data.substring(12,14);
 };
 
-function JOIN09000M00Component() {
+function JOIN09000M00_KOLBComponent() {
 
 };
 
-JOIN09000M00Component.prototype.afterSelect = function(data) {
+JOIN09000M00_KOLBComponent.prototype.afterSelect = function(data) {
 
     console.log('request >>' , data);
 
@@ -70,14 +70,14 @@ JOIN09000M00Component.prototype.afterSelect = function(data) {
     }
 };
 
-JOIN09000M00Component.prototype.ngOnInit = function () {
+JOIN09000M00_KOLBComponent.prototype.ngOnInit = function () {
 	var storeOrderId = $('#settleStoreOrderId').attr('value');
 	
 	var params = {
 			storeOrderId: storeOrderId
     };
 
-    var data = joinService.selectSettlement(params, JOIN09000M00.afterSelect);
+    var data = joinService.selectSettlement(params, JOIN09000M00_KOLB.afterSelect);
 };
 
 $(document).ready(function() {
@@ -88,5 +88,5 @@ $(document).ready(function() {
 	$('#goHome').click(function(){
 		toMove("MAIN00000M00");
     });
-	JOIN09000M00.ngOnInit();
+	JOIN09000M00_KOLB.ngOnInit();
 });

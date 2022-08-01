@@ -42,7 +42,7 @@
                         <% if (loginCls) { %>
 
                             <!-- PC에서 나오는 Kolb 배너 -->
-                            <a href="javascript:void(0);" onClick="toMove('JOIN09000M00')" class="showOnPC main-kolb-banner mainBanner">
+                            <a href="javascript:void(0);" onClick="toMove('JOIN09000M00KOLB')" class="showOnPC main-kolb-banner mainBanner">
                                 <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/kolb-banner.jpg" class="" />
                                 <!-- <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/kolb-banner.jpg" class="engine_on" /> -->
                             </a>
