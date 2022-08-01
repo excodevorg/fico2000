@@ -647,6 +647,9 @@ body, #content-container {
 .showOnTablet {
 	display: none;
 }
+.showOnMobile {
+    display: none;
+}
 
 @media screen and (max-width: 1030px) {
 	.showOnPC {
@@ -655,10 +658,25 @@ body, #content-container {
 	.showOnTablet {
 		display: block;
 	}
+    .showOnMobile {
+		display: none;
+	}
 	.mainBannerTxt {
 		top:5% !important;
 		right:5% !important;
 		width:50% !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.showOnPC {
+		display: none;
+	}
+	.showOnTablet {
+		display: none;
+	}
+	.showOnMobile {
+		display: block;
 	}
 }
 

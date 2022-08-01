@@ -49,7 +49,14 @@
 
                             <!-- 태블릿에서 나오는 Kolb 배너 -->
                             <div class="showOnTablet">
-                                <a href="javascript:void(0);" onClick="toMove('KOLB01000M00')">
+                                <a href="javascript:void(0);" onClick="toMove('JOIN09000M00KOLB')">
+                                    <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/kolb-banner-mobile.jpg" class="img-responsive" />
+                                </a>
+                            </div>
+
+                            <!-- 모바일에서 나오는 Kolb 배너 -->
+                            <div class="showOnMobile">
+                                <a href="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html" target="_self">
                                     <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/kolb-banner-mobile.jpg" class="img-responsive" />
                                 </a>
                             </div>
