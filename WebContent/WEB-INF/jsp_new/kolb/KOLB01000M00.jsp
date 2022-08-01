@@ -98,5 +98,5 @@
 <!--===================================================-->
 <!--END CONTENT CONTAINER-->
 
-<script src="/bootstrap/thema/fico2000_new/js/app/com/board.services.js"></script>
+<script src="/bootstrap/thema/fico2000_new/js/app/join/join.services.js"></script>
 <script src="/bootstrap/thema/fico2000_new/js/app/kolb/KOLB01000M00Component.js"></script>
