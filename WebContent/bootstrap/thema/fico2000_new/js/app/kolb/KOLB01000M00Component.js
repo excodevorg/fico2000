@@ -4,7 +4,7 @@ var KOLB01000M00 = new KOLB01000M00Component();
 var duplicateShield = false // 중복방지 
 
 var userService = new UserService(false);
-// var boardService = new BoardMngService(true);
+var boardService = new BoardMngService(true);
 
 function KOLB01000M00Component() {
 

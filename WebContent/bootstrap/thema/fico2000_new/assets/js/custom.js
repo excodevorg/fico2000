@@ -301,9 +301,15 @@ function toMove(menuId, obj) {
 
     console.log('obj >>>> ' , obj);
 
-    $("#ficoContent").load("/"+path+"/pageMove.do?menuCode="+menuId+"&params="+obj, function() {
-        overlay.hide();
-    });
+    if (subMenuId.indexOf("KOLB") > -1) {
+        $("#ficoContent").load("/"+path+"/pageMove.do?menuCode="+menuId, function() {
+            overlay.hide();
+        });
+    } else {
+        $("#ficoContent").load("/"+path+"/pageMove.do?menuCode="+menuId+"&params="+obj, function() {
+            overlay.hide();
+        });
+    }
 }
 function menuCreate(menus) {
 
