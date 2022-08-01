@@ -1344,3 +1344,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
+#kolbTest {    
+    width: 430px;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 430px;
+}
