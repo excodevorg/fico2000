@@ -297,6 +297,7 @@ function toMove(menuId, obj) {
     if (subMenuId.indexOf("PRES") > -1) path = 'pres';
     if (subMenuId.indexOf("ADVI") > -1) path = 'advi';
     if (subMenuId.indexOf("JOIN") > -1) path = 'join';
+    if (subMenuId.indexOf("KOLB") > -1) path = 'kolb';
 
     console.log('obj >>>> ' , obj);
 

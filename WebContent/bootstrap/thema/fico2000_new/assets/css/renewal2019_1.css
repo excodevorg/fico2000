@@ -1312,7 +1312,7 @@ input[type=number]::-webkit-outer-spin-button {
 .main-engine-banner { position: absolute; top:30px; left:30px; }
 .main-kolb-banner { position: absolute; top: 30px; left: 370px; }
 
-.mainBanner:hover {opacity: .5;}
+.mainBanner:hover {opacity: .8;}
 
 .page-header {font-weight:bold;padding:0 !important; padding-bottom:0 !important;}
 
