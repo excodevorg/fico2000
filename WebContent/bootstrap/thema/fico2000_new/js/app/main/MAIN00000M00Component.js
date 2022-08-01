@@ -117,14 +117,14 @@ $(document).ready(function() {
     var notiBoardList = new BoardMngService(true);
     notiBoardList.getBoardNewsAndLcteList('','',0,MAIN00000M00.boardCallBack);
     
-    $('.engine_on').hide();
-    $('.main-engine-banner').mouseover(function(e) {
-    	 $('.engine_off').hide();
-    	 $('.engine_on').show();
-    })
-    $('.main-engine-banner').mouseout(function(e) {
-    	$('.engine_on').hide();
-   	 $('.engine_off').show();
-    })
+    // $('.engine_on').hide();
+    // $('.main-engine-banner').mouseover(function(e) {
+    // 	 $('.engine_off').hide();
+    // 	 $('.engine_on').show();
+    // })
+    // $('.main-engine-banner').mouseout(function(e) {
+    // 	$('.engine_on').hide();
+   	//  $('.engine_off').show();
+    // })
         
 });
