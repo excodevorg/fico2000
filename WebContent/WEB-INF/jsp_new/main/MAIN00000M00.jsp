@@ -26,9 +26,10 @@
 	                    </div>
 	                    
 	                    <!-- PC에서 나오는 재무진단엔진배너 -->
-                    	<a href="javascript:void(0);" onClick="toMove('JOIN01000M00')" class="showOnPC main-engine-banner">
-                    		<img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/engine_banner.jpg" class="engine_off" />
-                    		<img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/engine_banner_on.jpg" class="engine_on" />
+                    	<a href="javascript:void(0);" onClick="toMove('JOIN01000M00')" class="showOnPC main-engine-banner mainBanner">
+                    		<img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/engine_banner.jpg" />
+                    		<!-- <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/engine_banner.jpg" class="engine_off" /> -->
+                    		<!-- <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/engine_banner_on.jpg" class="engine_on" /> -->
                     	</a>
                     	
                     	<!-- 태블릿에서 나오는 재무진단엔진배너 -->
@@ -39,7 +40,7 @@
 				        </div>
 
                         <!-- PC에서 나오는 Kolb 배너 -->
-                        <a href="javascript:void(0);" onClick="toMove('JOIN01000M00')" class="showOnPC main-engine-banner2">
+                        <a href="javascript:void(0);" onClick="toMove('JOIN01000M00')" class="showOnPC main-kolb-banner mainBanner">
                             <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/kolb-banner.jpg" class="" />
                             <!-- <img src="/bootstrap/thema/fico2000_new/assets/img/renewal2019/kolb-banner.jpg" class="engine_on" /> -->
                         </a>
@@ -55,7 +56,17 @@
             </div>
         </div>
         <!-- row End -->
-        
+
+        <!-- Kolb Test Start -->
+        <!-- <div id="kolbTest">
+            <link rel="manifest" href="/bootstrap/thema/fico2000_new/kolb/asset-manifest.json"/>
+            <link rel="manifest" href="/bootstrap/thema/fico2000_new/kolb/manifest.json"/>
+            <script defer="defer" src="/bootstrap/thema/fico2000_new/kolb/static/js/main.b29bdb25.js"></script>
+            <link href="/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css" rel="stylesheet">
+            <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div id="root"></div>
+        </div> -->
+        <!-- Kolb Test End -->
        
         <!-- row Start -->
         <div class="row mb20" style="padding:0 15px;">
