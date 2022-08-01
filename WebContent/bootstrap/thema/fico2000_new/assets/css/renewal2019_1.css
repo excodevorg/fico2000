@@ -1351,3 +1351,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 0;
     max-width: 430px;
 }
+.KolbApp .quizTitleArea .bubble,
+.KolbApp li, .KolbApp ul,
+.KolbApp .kolb-button
+{font-size: 15px;}
