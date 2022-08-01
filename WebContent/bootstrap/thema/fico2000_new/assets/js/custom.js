@@ -318,7 +318,7 @@ function menuCreate(menus) {
     
 	for (var i = 0 ; i < menus.length; i++) {
 
-console.log('menus[i] >>>> ', menus[i]);
+        console.log('menus[i] >>>> ', menus[i]);
 
 		if (menus[i].menuLevel == '2') {
             if (cnt1 > 0) {

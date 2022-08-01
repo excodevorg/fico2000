@@ -97,7 +97,9 @@
 <script src="/bootstrap/thema/fico2000_new/js/app/join/join.services.js"></script>
 <script src="/bootstrap/thema/fico2000_new/js/app/kolb/KOLB01000M00Component.js"></script>
 
+
+<!-- 
 <link rel="manifest" href="/bootstrap/thema/fico2000_new/kolb/asset-manifest.json"/>
 <link rel="manifest" href="/bootstrap/thema/fico2000_new/kolb/manifest.json"/>
 <script defer="defer" src="/bootstrap/thema/fico2000_new/kolb/static/js/main.b29bdb25.js"></script>
-<link href="/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css" rel="stylesheet">
+<link rel="stylesheet" href="/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css"> -->
