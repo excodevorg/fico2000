@@ -1362,7 +1362,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
-#kolbTest {    
+/* #kolbTest {    
     width: 430px;
     position: relative;
     top: 0;
@@ -1372,9 +1372,30 @@ input[type=number]::-webkit-outer-spin-button {
 .KolbApp .quizTitleArea .bubble,
 .KolbApp li, .KolbApp ul,
 .KolbApp .kolb-button
-{font-size: 15px;}
+{font-size: 15px;} */
+
+.kolb-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 170%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+#kolb-test {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 
+
+
+/* Youtube */
 .video-container {
     position: relative;
     width: 100%;
