@@ -20,8 +20,30 @@
         <!-- row Start --->
         <div class="row mb20">
             <div class="col-lg-7">
+
+                <!-- Kolb 박사 특성검사 Start -->
+                <div class="col-lg-5">
+                    <div class="panel">
+                        <!-- <div class="panel-heading">
+                            <h3 class="panel-title">Kolb 박사 특성검사</h3>
+                        </div> -->
+                        <div class="panel-body">
+                            <!-- Kolb Test Start -->
+                            <!-- <div id="kolbTest">
+                                <noscript>You need to enable JavaScript to run this app.</noscript>
+                                <div id="root"></div>
+                            </div> -->
+
+                            <iframe src="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html#/quiz2" 
+                            class="cursor-hover" style="width: 90%;height: 560px;border: none;"></iframe>
+
+                            <!-- Kolb Test End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Kolb 박사 특성검사 End -->
                 
-                <!--Kolb 소개-->
+                <!-- Kolb 소개 Start -->
                 <div class="col-lg-7">
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
@@ -61,28 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <!--Kolb 소개-->
-                
-                <!-- Kolb 박사 특성검사 -->
-                <div class="col-lg-5">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Kolb 박사 특성검사</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="nano" style="height:1070px">
-                                <div class="nano-content">
-                                    <!-- Kolb Test Start -->
-                                    <div id="kolbTest">
-                                        <noscript>You need to enable JavaScript to run this app.</noscript>
-                                        <div id="root"></div>
-                                    </div>
-                                    <!-- Kolb Test End -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Kolb 소개 End -->
+
             </div>
         </div>
     </div>
@@ -94,8 +96,8 @@
 
 <script src="/bootstrap/thema/fico2000_new/js/app/join/join.services.js"></script>
 <script src="/bootstrap/thema/fico2000_new/js/app/kolb/KOLB01000M00Component.js"></script>
-
+<!-- 
 <link rel="manifest" href="/bootstrap/thema/fico2000_new/kolb/asset-manifest.json"/>
 <link rel="manifest" href="/bootstrap/thema/fico2000_new/kolb/manifest.json"/>
 <script defer="defer" src="/bootstrap/thema/fico2000_new/kolb/static/js/main.b29bdb25.js"></script>
-<link rel="stylesheet" href="/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css">
+<link rel="stylesheet" href="/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css"> -->
