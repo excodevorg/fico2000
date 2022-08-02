@@ -19,7 +19,7 @@
 
         <!-- row Start --->
         <div class="row mb20">
-            <div class="col-lg-7" style="max-width:990px;">
+            <div style="max-width:990px;">
 
                 <!-- Kolb 박사 특성검사 Start -->
                 <div class="col-lg-5">
