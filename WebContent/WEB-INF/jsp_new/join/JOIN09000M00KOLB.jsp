@@ -27,14 +27,14 @@
                         <!-- <div class="panel-heading">
                             <h3 class="panel-title">Kolb 박사 특성검사</h3>
                         </div> -->
-                        <div class="panel-body">
+                        <div class="panel-body pa0">
                             <!-- Kolb Test Start -->
                             <!-- <div id="kolbTest">
                                 <noscript>You need to enable JavaScript to run this app.</noscript>
                                 <div id="root"></div>
                             </div> -->
 
-                            <iframe src="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html#/quiz2" 
+                            <iframe src="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html#/" 
                             class="cursor-hover" style="width: 100%;height: 560px;border: none;"></iframe>
 
                             <!-- Kolb Test End -->
