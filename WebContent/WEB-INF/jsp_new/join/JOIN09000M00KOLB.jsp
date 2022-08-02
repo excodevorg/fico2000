@@ -35,7 +35,7 @@
                             </div> -->
 
                             <iframe src="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html#/quiz2" 
-                            class="cursor-hover" style="width: 90%;height: 560px;border: none;"></iframe>
+                            class="cursor-hover" style="width: 100%;height: 560px;border: none;"></iframe>
 
                             <!-- Kolb Test End -->
                         </div>
