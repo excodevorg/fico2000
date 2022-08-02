@@ -19,7 +19,7 @@
 
         <!-- row Start --->
         <div class="row mb20">
-            <div class="col-lg-7">
+            <div class="col-lg-7" style="max-width:990px;">
 
                 <!-- Kolb 박사 특성검사 Start -->
                 <div class="col-lg-5">
@@ -34,8 +34,7 @@
                                 <div id="root"></div>
                             </div> -->
 
-                            <iframe id="kolb-test" src="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html#/" 
-                            class="cursor-hover" style="width: 100%;height: 600px;border: none;"></iframe>
+                            <iframe id="kolb-test" src="https://test.fico2000.com/bootstrap/thema/fico2000_new/kolb/index.html#/" class="cursor-hover"></iframe>
 
                             <!-- Kolb Test End -->
                         </div>
