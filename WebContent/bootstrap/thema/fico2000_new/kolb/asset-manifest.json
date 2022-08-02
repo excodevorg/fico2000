@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css",
-    "main.js": "/bootstrap/thema/fico2000_new/kolb/static/js/main.b29bdb25.js",
+    "main.js": "/bootstrap/thema/fico2000_new/kolb/static/js/main.d605b50e.js",
     "static/js/787.f796cc78.chunk.js": "/bootstrap/thema/fico2000_new/kolb/static/js/787.f796cc78.chunk.js",
     "static/media/009.png": "/bootstrap/thema/fico2000_new/kolb/static/media/009.e27355093585ba1945f7.png",
     "static/media/006.png": "/bootstrap/thema/fico2000_new/kolb/static/media/006.b5a8ab9a7543f51e92c5.png",
@@ -17,11 +17,11 @@
     "static/media/type3-text.png": "/bootstrap/thema/fico2000_new/kolb/static/media/type3-text.ddf75b5ae7925b6263cb.png",
     "index.html": "/bootstrap/thema/fico2000_new/kolb/index.html",
     "main.8f6bc939.css.map": "/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css.map",
-    "main.b29bdb25.js.map": "/bootstrap/thema/fico2000_new/kolb/static/js/main.b29bdb25.js.map",
+    "main.d605b50e.js.map": "/bootstrap/thema/fico2000_new/kolb/static/js/main.d605b50e.js.map",
     "787.f796cc78.chunk.js.map": "/bootstrap/thema/fico2000_new/kolb/static/js/787.f796cc78.chunk.js.map"
   },
   "entrypoints": [
-    "/bootstrap/thema/fico2000_new/kolb/static/css/main.8f6bc939.css",
-    "/bootstrap/thema/fico2000_new/kolb/static/js/main.b29bdb25.js"
+    "static/css/main.8f6bc939.css",
+    "static/js/main.d605b50e.js"
   ]
 }
