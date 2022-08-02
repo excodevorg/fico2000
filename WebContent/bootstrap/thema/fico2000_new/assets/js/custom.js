@@ -48,7 +48,7 @@ function ajaxSend(url, datas, methodType, async, callback) {
             contentType: "application/json;charset=utf-8",
 			success:function(data) {
                 if (data != null) {
-                    console.log("board ajax >>> " , data);
+                    // console.log("board ajax >>> " , data);
                     resultData = JSON.parse(data);
                 }
             },
@@ -85,7 +85,7 @@ function ajaxMultiPartSend(url, datas, methodType, async, callback) {
             contentType: "multipart/form-data",
 			success:function(data) {
                 if (data != null) {
-                    console.log("board ajax >>> " , data);
+                    // console.log("board ajax >>> " , data);
                     resultData = JSON.parse(data);
                 }
             },
@@ -175,7 +175,7 @@ function gnbDataLoaded(data) {
         }    
 	  }
 
-      console.log('menuFin >>', menuFin);
+    //   console.log('menuFin >>', menuFin);
       
 	  var ficonavi = '<ul id="mainnav-menu" class="list-group">';
 
@@ -244,16 +244,15 @@ function gnbDataLoaded(data) {
 
 	  ficonavi += '</ul>';
 
-      console.log('ficonavi >> ', ficonavi);
-
-      console.log('fourthMenus11111 >> ' , fourthMenus);
+    //   console.log('ficonavi >> ', ficonavi);
+    //   console.log('fourthMenus11111 >> ' , fourthMenus);
 
       // ficonavi += fourthMenus;
 
 	  $("#ficonavi").append( ficonavi );
 	  $("#ficonavi").append( fourthMenus );
 
-	  console.log('fourthMenus')
+	//   console.log('fourthMenus')
 
 	  //activate GNB with active_page_num
      if(activeMmenu >= 0) {
@@ -299,8 +298,8 @@ function toMove(menuId, obj) {
     if (subMenuId.indexOf("JOIN") > -1) path = 'join';
     if (subMenuId.indexOf("KOLB") > -1) path = 'kolb';
 
-    console.log('toMove >>>> ', menuId, obj)
-    console.log('obj >>>> ' , obj);
+    // console.log('toMove >>>> ', menuId, obj)
+    // console.log('obj >>>> ' , obj);
 
     $("#ficoContent").load("/"+path+"/pageMove.do?menuCode="+menuId+"&params="+obj, function() {
         overlay.hide();
@@ -308,7 +307,7 @@ function toMove(menuId, obj) {
 }
 function menuCreate(menus) {
 
-    console.log('menus', menus);
+    // console.log('menus', menus);
 
 	var cnt = 0;
     var cnt1 = 0; 
@@ -319,7 +318,7 @@ function menuCreate(menus) {
     
 	for (var i = 0 ; i < menus.length; i++) {
 
-        console.log('menus[i] >>>> ', menus[i]);
+        // console.log('menus[i] >>>> ', menus[i]);
 
 		if (menus[i].menuLevel == '2') {
             if (cnt1 > 0) {
@@ -367,7 +366,7 @@ function menuCreate(menus) {
 		
 		
         if (menus[i].menuLevel == '4') {
-            console.log('menuLevel >> ' , menus[i].menuLevel);
+            // console.log('menuLevel >> ' , menus[i].menuLevel);
             if (cnt2 == 0) {
                 fourthMenus += '<div id="fourthMenu'+ menus[i].upperMenuId +'" class="fourthMenu" onmouseover="onFourthMenuOver(event)" onmouseout="onFourthMenuOut(event)"><ul>';
                 cnt2 = cnt2 + 1;
@@ -379,12 +378,12 @@ function menuCreate(menus) {
         cnt = cnt + 1;
         
         
-        console.log('cnt', cnt)
-        console.log('cnt1', cnt1)
-        console.log('cnt2', cnt2)
-        console.log('i', i, 'menus[i].menuLevel', menus[i].menuLevel)
-        console.log('navi', navi)
-        console.log('fourthMenus', fourthMenus)
+        // console.log('cnt', cnt)
+        // console.log('cnt1', cnt1)
+        // console.log('cnt2', cnt2)
+        // console.log('i', i, 'menus[i].menuLevel', menus[i].menuLevel)
+        // console.log('navi', navi)
+        // console.log('fourthMenus', fourthMenus)
 	}
 
 	if (cnt1 > 0)  navi += '</ul>';
